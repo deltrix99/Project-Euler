@@ -1,0 +1,5 @@
+list = []
+# the list holds; for example, values
+
+s = sum(list)
+print(s)
