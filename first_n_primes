@@ -1,0 +1,21 @@
+import math
+
+def is_prime(num):
+    if num <= 1:
+        return False
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def get_first_n_primes(n):
+    if n <= 0:
+        return []
+
+    primes = []
+    current_number = 2 
+    while len(primes) < n:
+        if is_prime(current_number):
+            primes.append(current_number)
+        current_number += 1
+    return primes
